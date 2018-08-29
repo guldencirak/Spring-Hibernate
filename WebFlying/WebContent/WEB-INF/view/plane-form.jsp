@@ -41,20 +41,14 @@
 				<td><form:input path="Explanation"/> </td>
 				</tr>
 				
-				<!-- 
 				<tr>
-       			 <td>
-       			  <label>Company:</label>
-       			 </td>
-      		      <td>
-        			 <form:select multiple="multiple" path="rpd" id="secSkillId">                                                     
-    					<option value="0">--Select--</option>
-    					<form:options items="${secSkill}" itemValue="id" itemLabel="skillName"/>    
-				 </form:select>
-   			 	   </td>
-      			 </tr>
-        			-->
-        			
+				<td><label>Company:</label> </td>
+				<td>
+				<form:select path="company">
+  				 <form:option value="NONE" label="--- Select ---"/>
+  				 <form:options items="${companies}" itemValue="id" itemLabel="name"/></td>
+				</form:select> 
+        			</tr>
 				<tr>
 				<td><label></label> </td>
 				<td><input type="submit" value="Save" class="save"/> </td>

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.springdemo.entity.Company;
 import com.springdemo.entity.Plane;
 import com.springdemo.service.CompanyService;
 import com.springdemo.service.PlaneService;
@@ -44,12 +45,9 @@ public class PlaneController {
 		
 		theModel.addAttribute(thePlane);
 		
-		/*
-			Map<String, Object> model = new HashMap<String, Object>();
-			model.put("companies",  companyService.getCompaines());
+		List<Company> theCompanies=companyService.getCompaines();
 		
-			theModel.addAttribute(model);
-		*/
+		theModel.addAttribute("companies",theCompanies);
 		  
 		return "/plane-form";
 	}
